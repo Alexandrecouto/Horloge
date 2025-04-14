@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Arrivée - Départ</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Open+Sans&family=Playfair+Display&display=swap" rel="stylesheet" />
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Open Sans', sans-serif;
+      background-color: #f8f6f2;
+      color: #000;
+    }
+
+    .info-bloc {
+      max-width: 350px;
+      margin: 0 auto;
+      padding: 16px;
+    }
+
+    .main-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 28px;
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 20px;
+    }
+
+    .info-row {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .info-col {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .subtitle {
+      font-family: 'Lora', serif;
+      font-size: 20px;
+      font-weight: bold;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
+    .text {
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+
+    .hour {
+      font-weight: bold;
+      font-size: 20px;
+    }
+
+    .illustration {
+      width: 100%;
+      border-radius: 12px;
+    }
+
+    .home-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: none;
+      border: none;
+      font-size: 40px;
+      color: var(--text-primary);
+      cursor: pointer;
+      transition: opacity 250ms ease, color 250ms ease;
+      z-index: 100;
+    }
+
+    .home-button:hover {
+      color: var(--hover-dark);
+      opacity: 0.8;
+    }
+  </style>
+</head>
+
+<body>
+  <section class="info-bloc">
+    <h1 class="main-title">ARRIVÉE - DÉPART</h1>
+
+    <div class="info-row">
+      <div class="info-col">
+        <h2 class="subtitle">CHECK-IN</h2>
+        <p class="text">Arrivée à partir de <span class="hour">15h00</span></p>
+        <p style="text-align: justify;">Bienvenue dans notre studio ! Nous sommes ravis de vous accueillir et espérons que vous vous sentirez comme chez vous. Nous avons préparé ce studio avec soin et espérons que vous passerez un séjour agréable et confortable. N'hésitez pas à nous contacter si vous avez des questions ou besoin de quoi que ce soit. Profitez bien de votre séjour !</p>
+        <img src="https://img.freepik.com/photos-premium/tasse-cafe-plateau-bois-lit-fleurs-bougies_176873-11479.jpg" alt="Lit avec plateau et tasses" class="illustration" />
+      </div>
+
+      <div class="info-col">
+        <h2 class="subtitle">CHECK-OUT</h2>
+        <p class="text">Départ à <span class="hour">11h00</span></p>
+        <p style="text-align: justify;">Afin que votre départ se déroule le plus agréablement possible, nous vous serions reconnaissants de bien vouloir suivre ces quelques instructions simples. Merci de laisser les clés dans la boîte à clés prévue à cet effet. Avant de quitter le logement, assurez-vous que la vaisselle est propre et rangée, et que les ordures ont été déposées dans les poubelles. N'oubliez pas d'éteindre les lumières, de fermer les fenêtres et le velux. Veuillez également laisser les serviettes utilisées par terre dans la salle de bain. Si, par inadvertance, vous avez endommagé quoi que ce soit, nous vous remercions de nous en informer par téléphone, SMS ou via le site de location. Vos commentaires sont précieux pour nous permettre d'améliorer continuellement votre expérience, alors n'hésitez pas à nous laisser un message avant votre départ ou à nous contacter ultérieurement.</p>
+        <img src="https://i0.wp.com/levoyageur-organise.com/wp-content/uploads/2024/07/pexels-photo-7368313-edited.jpeg?w=867&ssl=1" alt="Valises devant un canapé" class="illustration" />
+      </div>
+    </div>
+
+    <a href="/" class="home-button" aria-label="Retour accueil">🏠</a>
+  </section>
+</body>
+</html>
