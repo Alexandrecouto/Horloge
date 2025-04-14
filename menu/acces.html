@@ -2,68 +2,72 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
   <title>Accès Logement</title>
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Playfair+Display&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Playfair+Display&display=swap" rel="stylesheet" />
 
   <style>
     :root {
       --text-primary: #000000;
       --hover-dark: #333333;
+      --bg-color: #F7F3E9;
+    }
+
+    * {
+      box-sizing: border-box;
     }
 
     body {
       margin: 0;
       padding: 0;
       font-family: 'Open Sans', sans-serif;
-      background-color: #F7F3E9;
+      background-color: var(--bg-color);
       color: var(--text-primary);
-      line-height: 1.5;
+      line-height: 1.6;
     }
 
     header {
       text-align: center;
-      padding: 20px;
+      padding: 1.5rem 1rem;
     }
 
     header h1 {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 28px;
-      font-weight: bold;
+      font-family: 'Open Sans', sans-serif;
+      font-size: 1.8rem;
+      font-weight: 700;
       letter-spacing: 1px;
       text-transform: uppercase;
       margin: 0;
     }
 
     .container {
-      width: 100%;
       max-width: 600px;
       margin: 0 auto;
-      padding: 0 20px;
+      padding: 0 1rem;
     }
 
     #map {
       width: 100%;
-      height: 300px;
-      margin: 20px 0;
+      height: 280px;
+      margin: 1.5rem 0;
       border-radius: 8px;
       overflow: hidden;
     }
 
     .address {
       text-align: center;
-      font-size: 16px;
-      font-weight: bold;
-      margin-bottom: 20px;
-      font-family: 'Montserrat', sans-serif;
+      font-size: 1rem;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
     }
 
     .transport-section {
       display: flex;
       align-items: flex-start;
-      padding: 15px 0;
+      gap: 1rem;
+      padding: 1rem 0;
       border-bottom: 1px solid #ccc;
     }
 
@@ -72,25 +76,25 @@
     }
 
     .transport-icon {
-      font-size: 30px;
-      margin-right: 15px;
-      width: 40px;
+      font-size: 1.5rem;
+      flex-shrink: 0;
     }
 
     .transport-text {
-      font-size: 16px;
+      font-size: 1rem;
+      flex: 1;
     }
 
     .home-button {
       position: fixed;
-      bottom: 20px;
-      right: 20px;
+      bottom: 1.2rem;
+      right: 1.2rem;
       background: none;
       border: none;
-      font-size: 40px;
+      font-size: 2.2rem;
       color: var(--text-primary);
       cursor: pointer;
-      transition: opacity 250ms ease, color 250ms ease;
+      transition: opacity 0.25s ease, color 0.25s ease;
       z-index: 100;
       text-decoration: none;
     }
@@ -102,21 +106,23 @@
 
     @media (max-width: 480px) {
       header h1 {
-        font-size: 24px;
-      }
-
-      .transport-icon {
-        font-size: 24px;
-        width: 30px;
-        margin-right: 10px;
-      }
-
-      .transport-text {
-        font-size: 14px;
+        font-size: 1.4rem;
       }
 
       #map {
-        height: 250px;
+        height: 240px;
+      }
+
+      .transport-icon {
+        font-size: 1.3rem;
+      }
+
+      .transport-text {
+        font-size: 0.95rem;
+      }
+
+      .address {
+        font-size: 0.95rem;
       }
     }
   </style>
@@ -127,7 +133,7 @@
     <h1>Accès Logement</h1>
   </header>
 
-  <div class="container">
+  <main class="container">
     <!-- Carte -->
     <div id="map">
       <iframe
@@ -135,45 +141,44 @@
         width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
       </iframe>
     </div>
-<br>
+
     <!-- Adresse -->
     <div class="address">
       10 Impasse de l’Horloge, 69009 Lyon
     </div>
-<br><br>
+
     <!-- Transports -->
-    <div class="transport-section">
+    <section class="transport-section">
       <div class="transport-icon">🚗</div>
       <div class="transport-text">
         <strong>Par la route :</strong> Depuis le centre de Lyon, veuillez vous orienter vers les quais de Saône, puis les suivre en direction de Vaise.
       </div>
-    </div>
+    </section>
 
-    <div class="transport-section">
+    <section class="transport-section">
       <div class="transport-icon">🚌</div>
       <div class="transport-text">
-        <strong>En bus :</strong> Les lignes TCL 31 et 43 desservent les arrêts "La Sauvagère" ou "Saint-Rambert & l'Île Barbe", situés à 5 min à pied. Métro D à "Garde de Vaise Gérard Collomb" pour correspondances.
+        <strong>En bus :</strong> Lignes TCL 31 et 43 vers "La Sauvagère" ou "Saint-Rambert & l'Île Barbe" (5 min à pied). Métro D : arrêt "Gare de Vaise Gérard Collomb".
       </div>
-    </div>
+    </section>
 
-    <div class="transport-section">
+    <section class="transport-section">
       <div class="transport-icon">🚲</div>
       <div class="transport-text">
-        <strong>En Vélo’v :</strong> Des stations Vélo’v sont situées à proximité, notamment au niveau de la station de bus "Saint-Rambert & l'Île Barbe". Une piste cyclable relie Vaise au quartier via les quais de Saône.
+        <strong>En Vélo’v :</strong> Stations à proximité, notamment vers "Saint-Rambert & l'Île Barbe". Piste cyclable via les quais.
       </div>
-    </div>
+    </section>
 
-    <div class="transport-section">
+    <section class="transport-section">
       <div class="transport-icon">⛴️</div>
       <div class="transport-text">
-        <strong>En Vaporetto :</strong> La navette fluviale relie Confluence au quartier de Vaise. L’arrêt “Vaise”, à une 15 minutes à pied, offre une balade agréable le long de la Saône.
+        <strong>En Vaporetto :</strong> Navette fluviale depuis Confluence jusqu’à "Vaise". Comptez 15 minutes à pied le long de la Saône.
       </div>
-    </div>
-  </div>
+    </section>
+  </main>
 
   <!-- Bouton accueil -->
   <a href="https://alexandrecouto.github.io/Horloge/" class="home-button" aria-label="Retour accueil">🏠</a>
 
 </body>
 </html>
-
