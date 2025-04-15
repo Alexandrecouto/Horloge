@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Règles de la Maison</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* Définition des variables de couleur (ajouté pour le bouton) */
+        :root {
+            --text-primary: #333333; /* Gris très foncé (utilisé pour le bouton) */
+            --hover-dark: #555555;   /* Gris moyen (utilisé pour le survol du bouton) */
+            --background-color: #FAF8F0; /* Couleur de fond principale */
+            --secondary-text: #555555; /* Texte secondaire (descriptions) */
+            --number-color: #888888;   /* Couleur des numéros */
+        }
+
+        /* 1. Styles Globaux */
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 1.5rem;
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-primary);
+            line-height: 1.4;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            /* Ajout d'un padding en bas pour éviter que le bouton ne recouvre le dernier texte */
+            padding-bottom: 80px; /* Ajustez si nécessaire */
+        }
+
+        /* 2. Section En-tête */
+        .rules-header {
+            margin-bottom: 2rem;
+        }
+
+        .rules-header h1 {
+            font-weight: 700;
+            font-size: clamp(1.5rem, 6vw, 2rem);
+            color: var(--text-primary);
+            text-transform: uppercase;
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 0.625rem;
+        }
+
+        .rules-header .separator {
+            height: 1px;
+            background-color: var(--text-primary);
+            width: 50px;
+            margin: 0 auto 1.5rem auto;
+            border: none;
+        }
+
+        /* 3. Liste des Règles */
+        /* Pas de style spécifique */
+
+        /* 4. Élément de Règle */
+        .rule-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            margin-bottom: 2rem;
+        }
+
+        .rule-item:last-child {
+            margin-bottom: 0;
+        }
+
+        /* 5. Numéro de la Règle */
+        .rule-number {
+            font-weight: 300;
+            font-size: clamp(3rem, 12vw, 4rem);
+            color: var(--number-color);
+            min-width: 40px;
+            text-align: right;
+            line-height: 0.9;
+            flex-shrink: 0;
+            margin-top: -0.2em;
+        }
+
+        /* 6. Contenu Texte de la Règle */
+        .rule-content {
+            flex-grow: 1;
+        }
+
+        /* 7. Titre de la Règle */
+        .rule-title {
+            font-weight: 700;
+            font-size: clamp(1rem, 4vw, 1.125rem);
+            color: var(--text-primary);
+            text-transform: uppercase;
+            margin-top: 0;
+            margin-bottom: 0.3rem;
+        }
+
+        /* 8. Description de la Règle */
+        .rule-description {
+            font-weight: 400;
+            font-size: clamp(0.875rem, 3.5vw, 1rem);
+            color: var(--secondary-text);
+            line-height: 1.5;
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+
+        /* 9. Bouton Accueil (AJOUTÉ) */
+        .home-button {
+            position: fixed;       /* Position fixe par rapport à la fenêtre */
+            bottom: 20px;          /* 20px du bas */
+            right: 20px;           /* 20px de la droite */
+            background: none;      /* Pas de fond */
+            border: none;          /* Pas de bordure */
+            font-size: 40px;       /* Taille de l'icône/emoji */
+            color: var(--text-primary); /* Couleur initiale (utilise la variable) */
+            cursor: pointer;       /* Curseur main */
+            transition: opacity 250ms ease, color 250ms ease; /* Animation douce */
+            z-index: 100;          /* Assure qu'il est au-dessus des autres éléments */
+            text-decoration: none; /* Enlève le soulignement du lien */
+        }
+
+        .home-button:hover {
+            color: var(--hover-dark); /* Couleur au survol (utilise la variable) */
+            opacity: 0.8;           /* Légère transparence au survol */
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="rules-screen">
+        <header class="rules-header">
+            <h1>Règles de la maison</h1>
+            <hr class="separator" />
+        </header>
+
+        <main class="rules-list">
+            <div class="rule-item">
+                <span class="rule-number">1</span>
+                <div class="rule-content">
+                    <h2 class="rule-title">Respect du voisinage</h2>
+                    <p class="rule-description">L'appartement se situe dans un immeuble calme, il est donc essentiel de respecter la tranquillité des lieux. Les fêtes, soirées et musiques à volume élevé sont strictement interdites, notamment entre 22h et 8h. Merci de faire preuve de discrétion dans les parties communes.</p>
+                </div>
+            </div>
+
+            <div class="rule-item">
+                <span class="rule-number">2</span>
+                <div class="rule-content">
+                    <h2 class="rule-title">Interdiction de fumer</h2>
+                    <p class="rule-description">Il est strictement interdit de fumer à l’intérieur du logement. Les fumeurs sont invités à le faire à l’extérieur, en prenant soin de ne pas jeter les mégots n’importe où.</p>
+                </div>
+            </div>
+
+            <div class="rule-item">
+                <span class="rule-number">3</span>
+                <div class="rule-content">
+                    <h2 class="rule-title">Animaux non admis</h2>
+                    <p class="rule-description">Par souci d’hygiène et pour éviter tout désagrément, les animaux ne sont pas autorisés dans le logement.</p>
+                </div>
+            </div>
+             
+             <div class="rule-item">
+                <span class="rule-number">4</span>
+                <div class="rule-content">
+                    <h2 class="rule-title">Propreté du logement</h2>
+                    <p class="rule-description">Nous demandons à chacun de respecter les lieux et de les laisser dans un état de propreté raisonnable. La vaisselle doit être nettoyée, les déchets jetés dans les bacs appropriés, et le mobilier laissé en place. En cas de dégradation, des frais pourront être retenus.</p>
+                </div>
+            </div>
+             
+             <div class="rule-item">
+                <span class="rule-number">5</span>
+                <div class="rule-content">
+                    <h2 class="rule-title">Utilisation du linge et du matériel</h2>
+                    <p class="rule-description">Le linge de maison (draps, serviettes…) est mis à disposition pour votre confort. Merci de ne pas l’emporter ou l’utiliser à des fins inhabituelles. Toute disparition ou dégradation de matériel pourra entraîner une retenue sur la caution.</p>
+                </div>
+            </div>
+             
+             <div class="rule-item">
+                <span class="rule-number">6</span>
+                <div class="rule-content">
+                    <h2 class="rule-title">Sécurité des lieux</h2>
+                    <p class="rule-description">Lorsque vous quittez l’appartement, merci de bien fermer les fenêtres et de verrouiller la porte d’entrée.</p>
+                </div>
+            </div>
+
+            </main>
+    </div>
+
+    <a href="/" class="home-button" aria-label="Retour accueil">🏠</a>
+
+</body>
+</html>
