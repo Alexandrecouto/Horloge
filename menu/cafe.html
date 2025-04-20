@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cafés & Bars</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Open+Sans&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --background: #F7F3E9;
+      --text-primary: #1f1f1f;
+      --hover-dark: #555;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Open Sans', sans-serif;
+      background-color: var(--background);
+      color: var(--text-primary);
+      padding: 1rem;
+    }
+
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+      text-align: center;
+      margin-bottom: 1rem;
+      letter-spacing: 2px;
+    }
+
+    .divider {
+      text-align: center;
+      margin-bottom: 1rem;
+      font-size: 2rem;
+    }
+
+    p.description {
+      text-align: center;
+      font-size: 0.95rem;
+      margin: 0 1rem 2rem 1rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+    }
+
+    .card {
+      background: none;
+      border: none;
+      box-shadow: none;
+    }
+
+    .card img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 10px;
+    }
+
+    .card-content {
+      padding: 0.5rem 0;
+    }
+
+    .card h3 {
+      font-size: 1rem;
+      font-weight: bold;
+      margin: 0.5rem 0 0.3rem 0;
+      font-family: 'Open Sans', sans-serif;
+    }
+
+    .card p {
+      font-size: 0.85rem;
+      margin: 0.3rem 0;
+    }
+
+    .card .address {
+      font-size: 0.75rem;
+      color: #666;
+    }
+
+    .home-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: none;
+      border: none;
+      font-size: 40px;
+      color: var(--text-primary);
+      cursor: pointer;
+      transition: opacity 250ms ease, color 250ms ease;
+      z-index: 100;
+    }
+
+    .home-button:hover {
+      color: var(--hover-dark);
+      opacity: 0.8;
+    }
+
+    @media (max-width: 600px) {
+      .grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>CAFÉ - BARS</h1>
+  <div class="divider">|</div>
+  <p class="description">
+    Découvrez les endroits idéals pour savourer de délicieuses boissons et se relaxer.
+  </p>
+
+  <div class="grid">
+    <div class="card">
+      <img src="https://lh3.googleusercontent.com/gps-cs-s/AB5caB8WkT51F31pB9ITHadN30ViJ7NrOu5VxwvmeyzSEUWnG9nWmWjrc4Wnph8Mg2uD_8TImMgbBNmtNlk59tU6gZhdm6oX3pOhqWJqxSOdJc59MM-r2mQe1IYb_ldKAw6lxj4fcgN5=s1360-w1360-h1020" alt="Café Lisa">
+      <div class="card-content">
+        <h3>CAILLOU CAFÉ COMPTOIR</h3>
+        <p class="address">📍 60 Quai de Pierre-Scize, 69005 Lyon</p>
+        <p>Le Caillou propose une carte variée, allant des cafés de spécialité aux plats faits maison comme des hot-dogs gourmets, des tapas et des pâtisseries. Les visiteurs apprécient particulièrement la qualité des produits et le service attentionné . De plus, l'établissement participe à des initiatives anti-gaspillage en collaborant avec des plateformes telles que Too Good To Go .</p>
+      </div>
+    </div>
+<!--
+    <div class="card">
+      <img src="https://via.placeholder.com/300x200?text=Café+Courrèges" alt="Café Courrèges">
+      <div class="card-content">
+        <h3>CAFÉ COURRÈGES</h3>
+        <p class="address">📍 127 rue des chemins, 34000 Montpellier</p>
+        <p>Mettez votre description ici. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      </div>
+    </div>
+-->
+    <div class="card">
+      <img src="https://lh3.googleusercontent.com/geougc-cs/AIHozJJQVn2YUwTie2oc0W3VP4VHXvLTqfBIy9bLewK8eaRCaIDXRmN8ljmdWS89RK14zphlWURH1BdeocaVxahN2l4_ZjPA0IDh17rY968ZajsZS2SgCKCdE_D70BX0pHUgNAjTHOrU=w302-h538-p" alt="Bar Lisita">
+      <div class="card-content">
+        <h3>LES TERRASSES DE L’ÎLE BARBE</h3>
+        <p class="address">📍 3 Quai Raoul Carrié, 69009 Lyonr</p>
+        <p>Situé en bord Saône dans un cadre calme avec une vue dégagée sur le fleuve et l'île Barbe, Les terrasses de l'île Barbe vous propose une multitude de plats frais et bios adaptés a tout les palais.</p>
+      </div>
+    </div>
+<!--
+    <div class="card">
+      <img src="https://via.placeholder.com/300x200?text=Bar+Roma" alt="Bar Roma">
+      <div class="card-content">
+        <h3>BAR ROMA</h3>
+        <p class="address">📍 227 rue des chemins, 34000 Montpellier</p>
+        <p>Mettez votre description ici. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      </div>
+    </div>
+  </div>
+-->
+  <a href="https://alexandrecouto.github.io/Horloge/" class="home-button" aria-label="Retour accueil">🏠</a>
+
+</body>
+</html>
