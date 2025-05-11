@@ -84,6 +84,18 @@
       color: var(--hover-dark);
       opacity: 0.8;
     }
+    .image-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .valise-img {
+      width: 100%;
+      max-width: 600px;
+      height: auto;
+    }
   </style>
 </head>
 <body>
@@ -98,7 +110,9 @@
       <div class="faq-answer">
         Oui, un parking gratuit est à votre disposition directement sur place. L’emplacement est encadré en bleu sur l’image ci-dessous.
       </div>
-        <img src="../image/faq/parking.png">
+        <div class="image-container">
+            <img  src="../image/faq/parking.png" alt="Valise" class="valise-img">
+        </div>
     </div>
 
     <div class="faq-item">
@@ -106,7 +120,9 @@
       <div class="faq-answer">
         Le local poubelle se trouve dans la cour, entre les garages. Il est facilement accessible à tout moment : il s’agit de la porte grise, indiquée par une flèche rouge sur l’image ci-dessous.
       </div>
-      <img src="../image/faq/localp.png">
+        <div class="image-container">
+            <img src="../image/faq/localp.png" alt="Valise" class="valise-img">
+        </div>
     </div>
 <!--
     <div class="faq-item">
