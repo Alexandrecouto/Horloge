@@ -151,32 +151,35 @@
   </div>
 
   <!-- Modale de navigation -->
-  <div id="mapModal" class="modal">
-    <div class="modal-content">
-      <h2>Choisissez votre application</h2>
-      <a href="https://maps.apple.com/?q=10+Impasse+de+l'Horloge,+69009+Lyon" target="_blank">Plans (Apple)</a>
-      <a href="https://www.google.com/maps/search/?api=1&query=10+Impasse+de+l'Horloge,+69009+Lyon" target="_blank">Google Maps</a>
-      <a href="https://waze.com/ul/hu05ktc4n9" target="_blank">Waze</a>
-      <a href="#" onclick="closeModal()">Annuler</a>
-    </div>
+<div id="mapModal" class="modal">
+  <div class="modal-content">
+    <h2>Choisissez votre application</h2>
+    <a href="https://maps.apple.com/?q=10+Impasse+de+l'Horloge,+69009+Lyon" target="_blank">Plans (Apple)</a>
+    <a href="https://www.google.com/maps/search/?api=1&query=10+Impasse+de+l'Horloge,+69009+Lyon" target="_blank">Google Maps</a>
+    <a href="https://waze.com/ul?q=10%20Impasse%20de%20l'Horloge%2069009%20Lyon&navigate=yes" target="_blank">Waze</a>
+
+    <!-- Bouton Copier l'adresse -->
+    <button onclick="copyMapAddress()" style="margin-top: 15px; padding: 10px 15px; background-color: #007BFF; color: white; border: none; border-radius: 6px; cursor: pointer;">
+      📋 Copier l'adresse
+    </button>
+    <div id="copyConfirmation" style="margin-top: 8px; font-size: 0.9em; color: green; display: none;">✅ Adresse copiée !</div>
+
+    <a href="#" onclick="closeModal()">Annuler</a>
   </div>
+</div>
 
-  <!-- JS pour gérer la modale -->
-  <script>
-    function openModal() {
-      document.getElementById("mapModal").style.display = "block";
-    }
-
-    function closeModal() {
-      document.getElementById("mapModal").style.display = "none";
-    }
-
-    window.onclick = function(event) {
-      const modal = document.getElementById("mapModal");
-      if (event.target == modal) {
-        modal.style.display = "none";
-      }
-    }
-  </script>
+<!-- Script JS à ajouter dans <script> -->
+<script>
+  function copyMapAddress() {
+    const address = "10 Impasse de l'Horloge, 69009 Lyon";
+    navigator.clipboard.writeText(address).then(() => {
+      const confirmation = document.getElementById("copyConfirmation");
+      confirmation.style.display = "block";
+      setTimeout(() => {
+        confirmation.style.display = "none";
+      }, 2000);
+    });
+  }
+</script>
 </body>
 </html>
