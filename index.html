@@ -168,8 +168,21 @@
   </div>
 </div>
 
-<!-- Script JS à ajouter dans <script> -->
-<script>
+  <!-- JS pour gérer la modale -->
+  <script>
+    function openModal() {
+      document.getElementById("mapModal").style.display = "block";
+    }
+
+    function closeModal() {
+      document.getElementById("mapModal").style.display = "none";
+    }
+
+    window.onclick = function(event) {
+      const modal = document.getElementById("mapModal");
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
   function copyMapAddress() {
     const address = "10 Impasse de l'Horloge, 69009 Lyon";
     navigator.clipboard.writeText(address).then(() => {
