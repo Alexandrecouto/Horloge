@@ -84,6 +84,39 @@
       text-align: center;
       border-radius: 12px;
     }
+    .footer a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* MODALE */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 999;
+      left: 0; top: 0;
+      width: 100%; height: 100%;
+      background-color: rgba(0,0,0,0.5);
+    }
+    .modal-content {
+      background-color: white;
+      margin: 30% auto;
+      padding: 20px;
+      width: 80%;
+      max-width: 400px;
+      text-align: center;
+      border-radius: 10px;
+    }
+    .modal-content a {
+      display: block;
+      margin: 10px 0;
+      font-size: 18px;
+      text-decoration: none;
+      color: #007BFF;
+    }
+    .modal-content a:hover {
+      text-decoration: underline;
+    }
   </style>
 </head>
 <body>
@@ -95,7 +128,6 @@
     </div>
 
     <div class="grid">
-   <!--   <a href="#sommaire" class="item"><img src="https://img.icons8.com/ios-filled/50/home.png"/><div>Sommaire</div></a> -->
       <a href="./menu/bienvenue.html" class="item"><img src="https://img.icons8.com/ios-filled/50/handshake.png"/><div>Bienvenue</div></a>
       <a href="./menu/arrivee.html" class="item"><img src="https://img.icons8.com/ios-filled/50/key.png"/><div>Arrivée / Départ</div></a>
       <a href="./menu/acces.html" class="item"><img src="https://img.icons8.com/ios-filled/50/map-marker.png"/><div>Accès</div></a>
@@ -110,22 +142,41 @@
       <a href="./menu/faq.html" class="item"><img src="https://img.icons8.com/ios-filled/50/faq.png"/><div>FAQ</div></a>
       <a href="./menu/urgence.html" class="item"><img src="https://img.icons8.com/ios-filled/50/error.png"/><div>Urgence</div></a>
       <a href="./menu/checklist.html" class="item"><img src="https://img.icons8.com/ios-filled/50/checklist.png"/><div>Checklist</div></a>
-   <!--   <a href="./menu/avis.html" class="item"><img src="https://img.icons8.com/ios-filled/50/thumb-up.png"/><div>Avis</div></a> -->
       <a href="./menu/contact.html" class="item"><img src="https://img.icons8.com/ios-filled/50/phone.png"/><div>Contact</div></a>
-   <!--    <a href="./menu/merci.html" class="item"><img src="https://img.icons8.com/ios-filled/50/thank-you.png"/><div>Merci</div></a> -->
     </div>
 
     <div class="footer">
-      📍 10 Impasse de l'Horloge, 69009 LYON
+      📍 <a href="#" onclick="openModal()">10 Impasse de l'Horloge, 69009 LYON</a>
     </div>
   </div>
+
+  <!-- Modale de navigation -->
+  <div id="mapModal" class="modal">
+    <div class="modal-content">
+      <h2>Choisissez votre application</h2>
+      <a href="https://maps.apple.com/?q=10+Impasse+de+l'Horloge,+69009+Lyon" target="_blank">Plans (Apple)</a>
+      <a href="https://www.google.com/maps/search/?api=1&query=10+Impasse+de+l'Horloge,+69009+Lyon" target="_blank">Google Maps</a>
+      <a href="https://waze.com/ul?q=10%20Impasse%20de%20l'Horloge%2069009%20Lyon&navigate=yes" target="_blank">Waze</a>
+      <a href="#" onclick="closeModal()">Annuler</a>
+    </div>
+  </div>
+
+  <!-- JS pour gérer la modale -->
+  <script>
+    function openModal() {
+      document.getElementById("mapModal").style.display = "block";
+    }
+
+    function closeModal() {
+      document.getElementById("mapModal").style.display = "none";
+    }
+
+    window.onclick = function(event) {
+      const modal = document.getElementById("mapModal");
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+  </script>
 </body>
 </html>
-
-
-
-
-
-
-
-
