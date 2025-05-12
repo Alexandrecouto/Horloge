@@ -158,7 +158,7 @@
     <a href="https://www.google.com/maps/search/?api=1&query=10+Impasse+de+l'Horloge,+69009+Lyon" target="_blank">Google Maps</a>
     <a href="https://waze.com/ul?q=10%20Impasse%20de%20l'Horloge%2069009%20Lyon&navigate=yes" target="_blank">Waze</a>
 
-    <!-- Bouton Copier l'adresse -->
+    <!-- Nouveau bouton copier -->
     <button onclick="copyMapAddress()" style="margin-top: 15px; padding: 10px 15px; background-color: #007BFF; color: white; border: none; border-radius: 6px; cursor: pointer;">
       📋 Copier l'adresse
     </button>
@@ -183,16 +183,18 @@
       if (event.target == modal) {
         modal.style.display = "none";
       }
-  function copyMapAddress() {
-    const address = "10 Impasse de l'Horloge, 69009 Lyon";
-    navigator.clipboard.writeText(address).then(() => {
-      const confirmation = document.getElementById("copyConfirmation");
-      confirmation.style.display = "block";
-      setTimeout(() => {
-        confirmation.style.display = "none";
-      }, 2000);
-    });
-  }
-</script>
+    }
+    function copyMapAddress() {
+  const address = "10 Impasse de l'Horloge, 69009 Lyon";
+  navigator.clipboard.writeText(address).then(() => {
+    const confirmation = document.getElementById("copyConfirmation");
+    confirmation.style.display = "block";
+    setTimeout(() => {
+      confirmation.style.display = "none";
+    }, 2000);
+  });
+}
+
+  </script>
 </body>
 </html>
